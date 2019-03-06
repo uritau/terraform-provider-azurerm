@@ -22,7 +22,7 @@ func TestAccDataSourceAzureRMApiManagementApi_basic(t *testing.T) {
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(dataSourceName, "display_name", "api1"),
 					resource.TestCheckResourceAttr(dataSourceName, "path", "api1"),
-					resource.TestCheckResourceAttr(dataSourceName, "protocols.%", "1"),
+					resource.TestCheckResourceAttr(dataSourceName, "protocols.#", "1"),
 					resource.TestCheckResourceAttr(dataSourceName, "protocols.0", "https"),
 					resource.TestCheckResourceAttr(dataSourceName, "soap_pass_through", "true"),
 					resource.TestCheckResourceAttr(dataSourceName, "is_current", "true"),
